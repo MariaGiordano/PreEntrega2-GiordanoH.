@@ -16,24 +16,25 @@ body{
 
 .grid-container{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: auto auto 200px;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto 100px;
     grid-template-areas:
     "header header header"
     "main main main"
     "footer footer footer"
     ;
+    height: 100vh;
 }
 
-.encabezado{
+.header{
     grid-area: header;
 }
 
-.contenido{
+.main{
     grid-area: main;
 }
 
-.pie{
+.footer{
     grid-area: footer;
 }
 
@@ -201,12 +202,11 @@ body{
 }
 
 /*--FOOTER--*/
-footer{
+.footer{
     align-items: center;
     text-align: center;  
     padding: 4px 0;
     background-color: #F8F9FA;
-    align-self: flex-end;
 }
 
 .pie-redes{
@@ -260,7 +260,7 @@ footer{
 /*--FIN FOOTER--*/
 
 /*PRODUCTOS*/
-.tituloproductos h2{
+.titulo-productos h1{
     font-size: 50px;
     font-weight: 900px;
     color: #60746c;
@@ -327,12 +327,12 @@ footer{
 
 
 /*FAQ*/
-.titulofaq{
+.titulo-faq{
     position: relative;
     z-index: 999;
 }
 
-.titulofaq h2{
+.titulo-faq h1{
     font-size: 50px;
     font-weight: 900px;
     color: #60746c;
@@ -354,6 +354,7 @@ footer{
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .accordion-header .accordion-button{
@@ -369,12 +370,7 @@ footer{
 
 
 /*SOBRE MI*/
-.titulosobrenosotros{
-    position: relative;
-    z-index: 999;
-}
-
-.titulosobrenosotros h2{
+.titulo-sobremi h2{
     font-size: 50px;
     font-weight: 900px;
     color: #60746c;
@@ -383,7 +379,7 @@ footer{
     text-align: center;
 }
 
-.sobrenosotros-texto p{
+.sobremi-texto p{
     font-size: 14px;
     text-align: center;
     margin-left: 200px;
@@ -391,11 +387,11 @@ footer{
     color: #303030;
 }
 
-.sobrenosotros-imagenes img{
+.sobremi-imagenes img{
     width: 100%;
     object-fit: cover;   
 }
-.sobrenosotros-imagenes {
+.sobremi-imagenes {
     width: 40%;
     max-width: 900px;
     margin: 40px auto;
@@ -448,7 +444,7 @@ footer{
     z-index: 999;
 }
 
-.titulocontacto h2{
+.titulo-contacto h1{
     font-size: 50px;
     font-weight: 900px;
     color: #60746c;
@@ -457,7 +453,7 @@ footer{
     text-align: center;
 }
 
-.titulocontacto p{
+.titulo-contacto p{
    font-size: 14px;
    text-align: center;
    margin-left: 20px;
