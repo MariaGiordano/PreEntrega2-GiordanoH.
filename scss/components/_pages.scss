@@ -1,0 +1,336 @@
+.header {
+  .navbar-brand i {
+    font-size: 35px;
+    color: $primary-color;
+  }
+
+  .nav-item a {
+    font-size: $font-size-small;
+    padding: 0 1.5rem;
+    color: $secondary-color;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+.contenido-img {
+  @include flex-center;
+  min-height: 100vh;
+  background: url(../img/imagen1.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 15px 20px 20px;
+  @include border-radius($border-radius);
+
+  h1 {
+    font-size: 80px;
+    color: $primary-color;
+    margin-left: 20px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: $font-size-medium;
+    color: $secondary-color;
+    padding: 1rem 0;
+    margin-left: 20px;
+    font-weight: 400;
+  }
+
+  .boton {
+    display: inline-block;
+    padding: 10px 20px;
+    color: $primary-color;
+    text-decoration: none;
+    border: 1px solid $primary-color;
+    @include border-radius($border-radius);
+    font-size: $font-size-medium;
+    cursor: pointer;
+    margin-left: 20px;
+    @include transition($transition-time);
+
+    &:hover {
+      background: $primary-color;
+      color: $background-color;
+    }
+  }
+}
+.container-informacion {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding: 3rem 0;
+
+  .card-informacion {
+    @extend %flex-center;
+    gap: 1.5rem;
+    background-color: $background-color;
+    @include border-radius($border-radius);
+    padding: 1.5rem 0;
+    margin: 0 1rem;
+
+    i {
+      font-size: 50px;
+      color: $primary-color;
+    }
+
+    .informacion-contenido {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      span {
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: $primary-color;
+      }
+
+      p {
+        font-weight: 500;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+.footer {
+  @extend %flex-center;
+  text-align: center;
+  padding: 4px 0;
+  background-color: $background-color;
+
+  .pie-redes {
+    text-align: center;
+    padding: 20px 0;
+    color: $secondary-color;
+
+    i {
+      font-size: 18px;
+      color: $secondary-color;
+      border: 1px solid $secondary-color;
+      width: 40px;
+      height: 40px;
+      line-height: 38px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 50%;
+      margin: 0 8px;
+
+      &:hover {
+        color: $primary-color;
+        border: 1px solid $primary-color;
+      }
+    }
+  }
+
+  .pie-menu {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: $font-size-small;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        padding: 0 15px;
+        margin-bottom: 10px;
+
+        a {
+          color: $secondary-color;
+          text-decoration: none;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+.titulo-productos {
+  h1 {
+    font-size: 50px;
+    font-weight: 900;
+    color: $primary-color;
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+
+.productos-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .productos-card {
+    text-align: center;
+    margin: 20px;
+    @include border-radius(6px);
+    background-color: $background-color;
+    box-shadow: 0px 1px 10px #e1e1e1;
+    cursor: default;
+    @include transition($transition-time);
+
+    &:hover {
+      box-shadow: 5px 5px 20px #ececec;
+      transform: translateY(-3%);
+    }
+
+    .productos-contenido {
+      padding: 10px;
+      text-align: center;
+
+      p {
+        line-height: 1.5;
+        color: $secondary-color;
+      }
+
+      h2 {
+        font-weight: 400;
+        margin-bottom: 15px;
+      }
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px;
+        margin-top: 10px;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        @include border-radius($border-radius);
+        @include transition($transition-time);
+
+        &:hover {
+          background-color: $primary-color;
+          color: $background-color;
+        }
+      }
+    }
+  }
+}
+.titulo-faq {
+  position: relative;
+  z-index: 999;
+
+  h1 {
+    font-size: 50px;
+    font-weight: 900;
+    color: $primary-color;
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+
+.accordion {
+  margin: 20px;
+
+  .accordion-item {
+    --bs-accordion-btn-bg: $background-color;
+    --bs-accordion-active-bg: $primary-color;
+    --bs-accordion-active-color: $background-color;
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-color: $primary-color;
+    --bs-accordion-border-radius: 10px;
+
+    .accordion-header .accordion-button {
+      font-size: $font-size-medium;
+    }
+
+    .accordion-body {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
+.titulo-sobremi {
+  h2 {
+    font-size: 50px;
+    font-weight: 900;
+    color: $primary-color;
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+
+.sobremi-texto {
+  p {
+    font-size: 14px;
+    text-align: center;
+    margin: 0 200px;
+    color: $secondary-color;
+  }
+}
+
+.sobremi-imagenes {
+  width: 40%;
+  max-width: 900px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.contacto-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contacto-formulario {
+  padding: 20px;
+  @include border-radius(5px);
+  width: 800px;
+
+  input,
+  textarea {
+    color: $secondary-color;
+    background-color: #fff;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid $primary-color;
+    @include border-radius($border-radius);
+    outline: none;
+  }
+
+  button {
+    background-color: #fff;
+    color: $primary-color;
+    padding: 10px;
+    border: 1px solid $primary-color;
+    @include border-radius($border-radius);
+    cursor: pointer;
+    width: 100%;
+    @include transition($transition-time);
+
+    &:hover {
+      background: $primary-color;
+      color: #f4f4f4;
+    }
+  }
+}
+
+.titulocontacto {
+  position: relative;
+  z-index: 999;
+
+  h1 {
+    font-size: 50px;
+    font-weight: 900;
+    color: $primary-color;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: center;
+    margin: 0 20px;
+  }
+}

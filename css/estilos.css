@@ -1,12 +1,403 @@
-header .navbar-brand i {
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* MAQUETACION */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* VARIABLES */
+/* MIXIN */
+/* EXTENDS */
+.footer, .container-informacion .card-informacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .navbar-brand i {
   font-size: 35px;
   color: #60746c;
 }
-header .nav-item a {
+.header .nav-item a {
   font-size: 16px;
   padding: 0 1.5rem;
   color: #303030;
 }
-header .nav-item a:hover {
+.header .nav-item a:hover {
   color: #60746c;
+}
+
+.contenido-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(../img/imagen1.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 15px 20px 20px;
+  border-radius: 20px;
+}
+.contenido-img h1 {
+  font-size: 80px;
+  color: #60746c;
+  margin-left: 20px;
+  font-weight: 600;
+}
+.contenido-img p {
+  font-size: 20px;
+  color: #303030;
+  padding: 1rem 0;
+  margin-left: 20px;
+  font-weight: 400;
+}
+.contenido-img .boton {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #60746c;
+  text-decoration: none;
+  border: 1px solid #60746c;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: all 400ms ease;
+}
+.contenido-img .boton:hover {
+  background: #60746c;
+  color: #f8f9fa;
+}
+
+.container-informacion {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding: 3rem 0;
+}
+.container-informacion .card-informacion {
+  gap: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  padding: 1.5rem 0;
+  margin: 0 1rem;
+}
+.container-informacion .card-informacion i {
+  font-size: 50px;
+  color: #60746c;
+}
+.container-informacion .card-informacion .informacion-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.container-informacion .card-informacion .informacion-contenido span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #60746c;
+}
+.container-informacion .card-informacion .informacion-contenido p {
+  font-weight: 500;
+  color: #303030;
+}
+
+.footer {
+  text-align: center;
+  padding: 4px 0;
+  background-color: #f8f9fa;
+}
+.footer .pie-redes {
+  text-align: center;
+  padding: 20px 0;
+  color: #303030;
+}
+.footer .pie-redes i {
+  font-size: 18px;
+  color: #303030;
+  border: 1px solid #303030;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+}
+.footer .pie-redes i:hover {
+  color: #60746c;
+  border: 1px solid #60746c;
+}
+.footer .pie-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  text-align: center;
+}
+.footer .pie-menu ul li {
+  display: inline-block;
+  padding: 0 15px;
+  margin-bottom: 10px;
+}
+.footer .pie-menu ul li a {
+  color: #303030;
+  text-decoration: none;
+}
+.footer .pie-menu ul li a:hover {
+  color: #60746c;
+}
+
+.titulo-productos h1 {
+  font-size: 50px;
+  font-weight: 900;
+  color: #60746c;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.productos-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.productos-container .productos-card {
+  text-align: center;
+  margin: 20px;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  box-shadow: 0px 1px 10px #e1e1e1;
+  cursor: default;
+  transition: all 400ms ease;
+}
+.productos-container .productos-card:hover {
+  box-shadow: 5px 5px 20px #ececec;
+  transform: translateY(-3%);
+}
+.productos-container .productos-card .productos-contenido {
+  padding: 10px;
+  text-align: center;
+}
+.productos-container .productos-card .productos-contenido p {
+  line-height: 1.5;
+  color: #303030;
+}
+.productos-container .productos-card .productos-contenido h2 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.productos-container .productos-card .productos-contenido a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  color: #60746c;
+  border: 1px solid #60746c;
+  border-radius: 20px;
+  transition: all 400ms ease;
+}
+.productos-container .productos-card .productos-contenido a:hover {
+  background-color: #60746c;
+  color: #f8f9fa;
+}
+
+.titulo-faq {
+  position: relative;
+  z-index: 999;
+}
+.titulo-faq h1 {
+  font-size: 50px;
+  font-weight: 900;
+  color: #60746c;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.accordion {
+  margin: 20px;
+}
+.accordion .accordion-item {
+  --bs-accordion-btn-bg: $background-color;
+  --bs-accordion-active-bg: $primary-color;
+  --bs-accordion-active-color: $background-color;
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-color: $primary-color;
+  --bs-accordion-border-radius: 10px;
+}
+.accordion .accordion-item .accordion-header .accordion-button {
+  font-size: 20px;
+}
+.accordion .accordion-item .accordion-body {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.titulo-sobremi h2 {
+  font-size: 50px;
+  font-weight: 900;
+  color: #60746c;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.sobremi-texto p {
+  font-size: 14px;
+  text-align: center;
+  margin: 0 200px;
+  color: #303030;
+}
+
+.sobremi-imagenes {
+  width: 40%;
+  max-width: 900px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.sobremi-imagenes img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contacto-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contacto-formulario {
+  padding: 20px;
+  border-radius: 5px;
+  width: 800px;
+}
+.contacto-formulario input,
+.contacto-formulario textarea {
+  color: #303030;
+  background-color: #fff;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #60746c;
+  border-radius: 20px;
+  outline: none;
+}
+.contacto-formulario button {
+  background-color: #fff;
+  color: #60746c;
+  padding: 10px;
+  border: 1px solid #60746c;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 400ms ease;
+}
+.contacto-formulario button:hover {
+  background: #60746c;
+  color: #f4f4f4;
+}
+
+.titulocontacto {
+  position: relative;
+  z-index: 999;
+}
+.titulocontacto h1 {
+  font-size: 50px;
+  font-weight: 900;
+  color: #60746c;
+  margin: 20px 0;
+  text-align: center;
+}
+.titulocontacto p {
+  font-size: 14px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+@media screen and (max-width: 1133px) {
+  .imagen-sobrenosotros {
+    display: none;
+  }
+  .texto-sobrenosotros {
+    text-align: center;
+    margin: 0 40px 30px;
+  }
+  .container-informacion {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 2.5rem 0;
+  }
+  .contenido-img {
+    min-height: 45vh;
+  }
+  .contenido-img p {
+    display: none;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .card-informacion i {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container-informacion {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+  }
+  .productos-container {
+    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  .container-informacion {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+  }
+  .productos-container {
+    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  .container-informacion {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+  }
+  .card-informacion {
+    margin: 0 10rem;
+  }
 }/*# sourceMappingURL=estilos.css.map */

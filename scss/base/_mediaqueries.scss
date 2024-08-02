@@ -1,0 +1,72 @@
+// _media-queries.scss
+@media screen and (max-width: 1133px) {
+  .imagen-sobrenosotros {
+    display: none;
+  }
+
+  .texto-sobrenosotros {
+    text-align: center;
+    margin: 0 40px 30px;
+  }
+
+  .container-informacion {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 2.5rem 0;
+  }
+
+  .contenido-img {
+    min-height: 45vh;
+  }
+
+  .contenido-img p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .card-informacion i {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container-informacion {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+  }
+
+  .productos-container {
+    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container-informacion {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+  }
+
+  .productos-container {
+    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-informacion {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+  }
+
+  .card-informacion {
+    margin: 0 10rem;
+  }
+}
